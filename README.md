@@ -10,9 +10,10 @@
 
 ## Notes
 
-This project creates a namespace called `foo` and then deletes it using the loginAdministrative API. Note that this project will create the whitelist config for you in order to allow the deletion of the namespace.
+- This project creates a namespace called `foo` and then deletes it using the loginAdministrative API. Note that this project will create the whitelist config for you in order to allow the deletion of the namespace.
+- Once this is done the code should be removed and the loginAdministrative config should be removed also.
+- It seems that on initial deployment the namespace may be registered after the bundle has been activated. Thus you may see errors in the log restarting the bundle will perform test test adequately.
 
-Once this is done the code should be removed and the loginAdministrative config should be removed also.
 
 ## Archetype Command
 
@@ -25,3 +26,5 @@ mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
  -D groupId="com.adobe.aem.support" \
  -D artifactId="reposervice" \
  -D aemVersion="6.5.12"
+ 
+ 
